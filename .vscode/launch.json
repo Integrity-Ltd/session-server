@@ -1,0 +1,17 @@
+{
+    // IntelliSense használata a lehetséges attribútumok listázásához
+    // Húzza fölé az egeret a létező attribútumok leírásának megtekintéséhez!
+    // További információért látogassa meg a következőt: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\mongodb.js"
+        }
+    ]
+}
