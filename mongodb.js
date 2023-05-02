@@ -22,20 +22,6 @@ store.on('error', function (error) {
 const app = express();
 app.use(cookieParser());
 
-app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, x-auth-token');
-
-    if ('OPTIONS' === req.method) {
-        res.send(200);
-    }
-    else {
-        next();
-    }
-});
-
 const sessionConfig = {
     secret: process.env.SESSION_SECRET,
     resave: true,
