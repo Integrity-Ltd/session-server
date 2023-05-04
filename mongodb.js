@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 import { default as connectMongoDBSession } from 'connect-mongodb-session';
 import axios from 'axios';
 import { default as User } from './user.js';
-import { default as connection } from "./db.js";
+import { default as db } from "./db.js";
 import bcrypt from 'bcrypt';
 
 dotenv.config()
@@ -23,7 +23,7 @@ store.on('error', function (error) {
     console.log(error);
 });
 
-connection.connection();
+db.connection();
 
 const app = express();
 app.use(cookieParser());

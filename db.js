@@ -14,4 +14,4 @@ let connection = async () => {
     }
 };
 
-export default { connection: connection };
+export default { connection };
